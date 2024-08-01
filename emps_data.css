@@ -1,0 +1,124 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Tajawal', sans-serif;
+}
+:root {
+  --main-color: #f10;
+  --second-color: #144272;
+
+}
+html{
+  scroll-behavior: smooth;
+}
+body {
+  font-family: 'Tajawal', sans-serif;
+  background-color: #222;
+  color: #fff;
+    background-image: radial-gradient(circle at center center, transparent,rgb(0,0,0)),linear-gradient(300deg, rgba(198, 198, 198,0.05) 0%, rgba(198, 198, 198,0.05) 50%,rgba(11, 11, 11,0.05) 50%, rgba(11, 11, 11,0.05) 100%),linear-gradient(64deg, rgba(54, 54, 54,0.05) 0%, rgba(54, 54, 54,0.05) 50%,rgba(132, 132, 132,0.05) 50%, rgba(132, 132, 132,0.05) 100%),linear-gradient(17deg, rgba(57, 57, 57,0.05) 0%, rgba(57, 57, 57,0.05) 50%,rgba(128, 128, 128,0.05) 50%, rgba(128, 128, 128,0.05) 100%),linear-gradient(332deg, rgba(97, 97, 97,0.05) 0%, rgba(97, 97, 97,0.05) 50%,rgba(85, 85, 85,0.05) 50%, rgba(85, 85, 85,0.05) 100%),linear-gradient(148deg, rgba(237, 237, 237,0.05) 0%, rgba(237, 237, 237,0.05) 50%,rgba(211, 211, 211,0.05) 50%, rgba(211, 211, 211,0.05) 100%),linear-gradient(142deg, rgba(168, 168, 168,0.05) 0%, rgba(168, 168, 168,0.05) 50%,rgba(32, 32, 32,0.05) 50%, rgba(32, 32, 32,0.05) 100%),linear-gradient(15deg, rgba(225, 225, 225,0.05) 0%, rgba(225, 225, 225,0.05) 50%,rgba(228, 228, 228,0.05) 50%, rgba(228, 228, 228,0.05) 100%),linear-gradient(5deg, rgba(104, 104, 104,0.05) 0%, rgba(104, 104, 104,0.05) 50%,rgba(43, 43, 43,0.05) 50%, rgba(43, 43, 43,0.05) 100%),radial-gradient(circle at center center, hsl(290,5%,8%),hsl(290,5%,8%));
+
+}
+.container {
+  width: 90%;
+  margin: 0px auto;
+}
+header{
+  padding: 15px 10px;
+  width: 100%;
+  background-color: #222;
+}
+header .container{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+header a{
+  color: #fff;
+  text-decoration: none;
+}
+header a i{
+  font-size: 20px
+}
+header h2{
+  font-size: 16px
+}
+header h2:first-letter{
+  color: #f10;
+}
+.addJob{
+  text-align: center;
+  margin: 20px auto;
+  background-color: goldenrod;
+  color: #fff;
+  width: 90%;
+  padding: 10px;
+  border-radius: 5px;
+  top: 10px;
+  right: 15px;
+      box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+}
+.addJob a{
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  width: 100%;
+  display: inline-block;
+}
+.headImg {
+  text-align: center;
+  margin: 30px auto;
+}
+
+.headImg img {
+  width: 200px;
+  height: 270px;
+  filter: drop-shadow(1px 5px 60px #fff)
+}
+.card {
+  text-align: right;
+  padding: 10px;
+  box-shadow: 1px 1px 1px 1px #000000;
+  border-radius: 4px;
+  position: relative;
+  margin: 15px auto 30px;
+  width: 90%;
+}
+.card label{
+  text-align: right;
+  color: goldenrod;
+  font-size: 16px;
+}
+.card:hover {
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.card h2 {
+  margin: 0 0 10px;
+  color: #fff;
+}
+.card:after{
+  content: "موظف متاح";
+  position: absolute;
+  left: 10px;
+  top:-15px;
+  width: 80px;
+  height: 30px;
+  background-color: darkred;
+  color: #fff;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 13px;
+  padding: 0 10px;
+  border-radius: 5px
+}
+.card label{
+  color: goldenrod;
+  font-size: 15px
+}
+.card p{
+  font-size: 18px;
+  margin: 10px 0;
+}

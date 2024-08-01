@@ -1,0 +1,207 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Tajawal', sans-serif;
+}
+:root {
+  --main-color: #C81616;
+  --second-color: #144272;
+
+}
+html{
+  scroll-behavior: smooth;
+}
+body {
+  font-family: 'Tajawal', sans-serif;
+  color: #fff;
+  background-image: radial-gradient(circle at center center, transparent,rgb(0,0,0)),linear-gradient(300deg, rgba(198, 198, 198,0.05) 0%, rgba(198, 198, 198,0.05) 50%,rgba(11, 11, 11,0.05) 50%, rgba(11, 11, 11,0.05) 100%),linear-gradient(64deg, rgba(54, 54, 54,0.05) 0%, rgba(54, 54, 54,0.05) 50%,rgba(132, 132, 132,0.05) 50%, rgba(132, 132, 132,0.05) 100%),linear-gradient(17deg, rgba(57, 57, 57,0.05) 0%, rgba(57, 57, 57,0.05) 50%,rgba(128, 128, 128,0.05) 50%, rgba(128, 128, 128,0.05) 100%),linear-gradient(332deg, rgba(97, 97, 97,0.05) 0%, rgba(97, 97, 97,0.05) 50%,rgba(85, 85, 85,0.05) 50%, rgba(85, 85, 85,0.05) 100%),linear-gradient(148deg, rgba(237, 237, 237,0.05) 0%, rgba(237, 237, 237,0.05) 50%,rgba(211, 211, 211,0.05) 50%, rgba(211, 211, 211,0.05) 100%),linear-gradient(142deg, rgba(168, 168, 168,0.05) 0%, rgba(168, 168, 168,0.05) 50%,rgba(32, 32, 32,0.05) 50%, rgba(32, 32, 32,0.05) 100%),linear-gradient(15deg, rgba(225, 225, 225,0.05) 0%, rgba(225, 225, 225,0.05) 50%,rgba(228, 228, 228,0.05) 50%, rgba(228, 228, 228,0.05) 100%),linear-gradient(5deg, rgba(104, 104, 104,0.05) 0%, rgba(104, 104, 104,0.05) 50%,rgba(43, 43, 43,0.05) 50%, rgba(43, 43, 43,0.05) 100%),radial-gradient(circle at center center, hsl(290,5%,8%),hsl(290,5%,8%));
+  
+}
+.container {
+  width: 95%;
+  margin: 0px auto;
+}
+header{
+  padding: 10px 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: #222;
+  
+}
+header a{
+  color: #fff;
+  text-decoration: none
+}
+header h2{
+  font-size: 21px
+}
+header h2:first-letter{
+  color: #f10;
+}
+.main .container{
+  text-align: center;
+  padding: 10px;
+  margin-top: 90px
+}
+.main .container img{
+  width: 200px;
+  height: 250px;
+  filter: drop-shadow(1px 5px 60px darkred)
+}
+.main .container h1{
+  font-size: 55px
+}
+.main .container p{
+  font-size: 16px;
+  margin: 18px 0
+}
+.main .container a{
+  color: #fff;
+  border: 1px solid white;
+  display: inline-block;
+  padding: 5px 15px;
+  text-decoration: none;
+  font-size: 16px
+}
+.sections{
+  height: 100vh;
+  margin: 60px auto 0;
+  
+}
+.sections .container{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 90%;
+  margin: 0 auto;
+  text-align: center
+}
+.sections .container a{
+  text-align: center;
+  width: 100%;
+  margin: 15px 0;
+  height: 270px;
+    text-decoration: none;
+padding: 20px 10px;
+  border-radius: 6px;
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+  background: transparent;
+  border-left: 2px solid darkred;
+  border-right: 2px solid darkred;
+}
+.sections .container a img{
+  width: 180px;
+  height: 190px;
+  margin: 0 10px;
+  padding: 2px 
+}
+.sections .container a img.one{
+  height: 143px;
+  width: 140px
+}
+.sections .container a p{
+  color: #fff;
+  margin-top: 15px;
+  font-size: 18px;
+  font-weight: bold;
+}
+.headTitle{
+  margin: 50px auto;
+  text-align: center;
+  padding: 20px;
+  background: linear-gradient(to bottom, darkred,#000)
+}
+.headTitle h3{
+  color: white;
+  font-size:33px
+}
+marquee{
+  box-shadow: 1px 1px 2px 2px #000;
+  padding: 10px 0;
+  position: fixed;
+  bottom: 0;
+  background-color: #222;
+}
+marquee:after{
+  content: "رسائل";
+  position: absolute;
+  left: 0;
+  top:0;
+  width: 60px;
+  background-color: darkred;
+  color: #fff;
+  height: 100%;
+  padding: 0 4px;
+  text-align: center;
+  padding-top: 10px;
+  font-size:17px;
+  font-weight: bold
+}
+ .sidebar {
+   height: 100%;
+   width: 0;
+   position: fixed;
+   top: 0;
+   left: -5px;
+   background-color: #f1f5f9;
+   overflow-x: hidden;
+   transition: 0.5s;
+   padding-top: 60px;
+   z-index: 5;
+   text-align: center;
+   border-right: 2px solid white
+ }
+
+ .sidebar a {
+   padding: 10px 15px;
+   text-decoration: none;
+   font-size: 25px;
+   color: #000;
+   display: block;
+   transition: 0.3s;
+ }
+  .sidebar a i{
+    display: block;
+    margin-bottom: 8px;
+    font-size: 30px
+  }
+    .sidebar a .fa-whatsapp{
+       color: #25d366;
+    }
+    .sidebar a .fa-facebook-f{
+      color: #1877f2;
+    }
+ .sidebar a:hover {
+   color: #f10;
+ }
+
+ .sidebar .closebtn {
+   position: absolute;
+   top: 0;
+   right: 1px;
+   font-size: 36px;
+   margin-left: 50px;
+
+ }
+
+ .openbtn {
+   font-size: 23px;
+   cursor: pointer;
+   background-color: transparent;
+   color: white;
+   padding: 5px 10px 2px;
+   border: 1px solid #f1f5f9;
+   border-radius: 3px;
+   position: fixed;
+   top: 8px;
+   right: 8px;
+   z-index: 4;
+   transition:.5s;
+ }
+
+ .openbtn:hover {
+   background-color: transparent;
+ }

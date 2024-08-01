@@ -1,0 +1,149 @@
+
+<?php
+session_start();
+
+// التحقق من تسجيل الدخول
+if (!isset($_SESSION['loggedin'])) {
+    header('Location: login.php');
+    exit();
+}
+?>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+          <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+          <meta name="viewport" content="width=device-width, initial-scale=1">
+            <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@200;300;400;500&display=swap" rel="stylesheet">
+    
+    <title>Jobs Dashboard</title>
+    <style>
+        body {
+            font-family:'Tajawal', sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            width: 90%;
+            margin: auto;
+            overflow: hidden;
+        }
+        header {
+            background: #333;
+            color: #fff;
+            padding: 10px 0;
+            text-align: center;
+            border-bottom: #0779e4 3px solid;
+        }
+        header h1 {
+            margin: 0;
+        }
+        table {
+            width: 100%;
+            margin: 20px 0;
+            border-collapse: collapse;
+        }
+        table, th, td {
+            border: 1px solid #ddd;
+        }
+        th, td {
+            padding: 12px;
+            text-align: left;
+        }
+        th {
+            background-color: #f4f4f4;
+        }
+        .delete-btn {
+            background: #e60000;
+            color: #fff;
+            padding: 5px 10px;
+            border: none;
+            cursor: pointer;
+        }
+        .delete-btn:hover {
+            background: #cc0000;
+        }
+        @media (max-width: 600px) {
+            table, thead, tbody, th, td, tr {
+                display: block;
+            }
+            thead tr {
+                display: none;
+            }
+            tr {
+                margin-bottom: 15px;
+            }
+            td {
+                text-align: right;
+                padding-left: 50%;
+                position: relative;
+            }
+            td:before {
+                content: attr(data-label);
+                position: absolute;
+                left: 0;
+                width: 50%;
+                padding-left: 15px;
+                font-weight: bold;
+                text-align: left;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Jobs Dashboard</h1>
+            <a href="logout.php">Logout</a>
+        </div>
+    </header>
+    <div class="container">
+        <h2>Accepted Jobs</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Company Name</th>
+                    <th>Address</th>
+                    <th>Phone</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                <?php
+                    // الاتصال بقاعدة البيانات
+                    $conn = new mysqli('localhost', 'root', '', 'jobs');
+
+                    // فحص الاتصال
+                    if ($conn->connect_error) {
+                        die("Connection failed: " . $conn->connect_error);
+                    }
+
+                    // جلب البيانات من الجدول
+                    $sql = "SELECT id, company_name, address, phone FROM accepted";
+                    $result = $conn->query($sql);
+
+                    if ($result->num_rows > 0) {
+                        // عرض البيانات في الجدول
+                        while($row = $result->fetch_assoc()) {
+                            echo "<tr>";
+                            echo "<td data-label='ID'>" . $row["id"]. "</td>";
+                            echo "<td data-label='Company Name'>" . $row["company_name"]. "</td>";
+                            echo "<td data-label='Address'>" . $row["address"]. "</td>";
+                            echo "<td data-label='Phone'>" . $row["phone"]. "</td>";
+                            echo '<td data-label="Action"><form method="POST" action="delete.php"><input type="hidden" name="id" value="'.$row["id"].'"><input type="submit" class="delete-btn" value="Delete"></form></td>';
+                            echo "</tr>";
+                        }
+                    } else {
+                        echo "<tr><td colspan='5'>No records found</td></tr>";
+                    }
+
+                    $conn->close();
+                ?>
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>

@@ -1,0 +1,73 @@
+    body {
+      font-family: 'Tajawal', sans-serif;
+      background-color: #f8f9fa;
+      margin: 0;
+      padding: 20px;
+    }
+
+    .form-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 20px;
+      background: #fff;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    h3 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .card {
+      background: #fff;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      margin-bottom: 20px;
+      padding: 20px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    .card h4 {
+      margin: 0 0 10px;
+    }
+
+    .card p {
+      margin: 5px 0;
+    }
+
+    .card-actions {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 10px;
+    }
+
+    .card-actions form {
+      display: inline-block;
+    }
+
+    .card-actions input[type="submit"] {
+      background: #007bff;
+      color: #fff;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    .card-actions input[type="submit"]:nth-child(2) {
+      background: #dc3545;
+    }
+
+    @media (min-width: 600px) {
+      .card {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .card-content {
+        flex: 1;
+        margin-right: 20px;
+      }
+    }
